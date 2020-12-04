@@ -1,0 +1,182 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Weather</title>
+	<link rel="stylesheet" href="{% static 'css/home.css' %}">
+	<link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300&display=swap"
+	rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&family=Peddana&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&family=Peddana&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&family=Peddana&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/slick.css' %}"/>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/slick-theme.css' %}"/>
+</head>
+<body>
+	<header class="header">
+		<div class="container">
+			<div class="header__inner">
+				<div class="header__logo">WEATHER</div>
+
+				<nav class="nav">
+					<a class="nav__link" href="#">Home</a>
+					<a class="nav__link" href="#">Features</a>
+					<a class="nav__link" href="#">Reviews</a>
+					<a class="nav__link" href="#">Download</a>
+				</nav>
+
+			</div>
+		</div>
+	</header>
+	<div class="intro">
+		<div class="container">
+			<div class="intro__inner">
+
+				<h1 class="intro__title">Get the most cool weather app</h1>
+				<h2 >Simple, nice and user-friendly application of the weather. Only useful information</h2>
+				<a href="" class="intro__btn"><snap>Download</snap></a>
+				<a href="" class="inrto__btn_two"><snap>Features</snap></a>
+
+			</div>
+		</div>
+	</div>
+
+    <section6>
+        <div class="container">
+            <div class="section__header6">
+				<h1>Check the weather right here!</h1>
+				<p class="p6">Just click</p>
+			</div>
+                    <button class="wbtn">Weather now</button>
+                    <button class="wbtn">For 10 days</button>
+                    <button class="wbtn">For a month</button>
+        </div>
+    </section6>
+
+	<section>
+		<div class="container">
+			<div class="section__header">
+				<h1>PERFECT FEATURES</h1>
+				<p class="p">Only necessary</p>
+			</div>
+			<div class="bar">
+				<img src="{% static 'images/int1.jpg' %}" width="70" height="70" class="rightpic"> <h1 class="h1">Usability<p class="p1">Sometimes the simplast things are the hardest to find. So we created a new line for everyday life</p> </h1>
+
+				<img src="{% static 'images/int2.jpg' %}" width="70" height="70" class="rightpic"> <h1 class="h1">Parallax Effect
+					<p class="p1">Sometimes the simplast things are the hardest to find. So we created a new line for everyday life</p></h1>
+
+
+					<img src="{% static 'images/int3.jpg' %}" width="70" height="70" class="rightpic"> <h1 class="h1">Unlimites Colors <p class="p1">Sometimes the simplast things are the hardest to find. So we created a new line for everyday life</p> </h1>
+
+				</div>
+			</div>
+		</section>
+
+		<section2>
+			<div class="container">
+				<div class="section__header2">
+					<h1>SIMPLE WIDGETS</h1>
+					<p class="p2">Drag and Drop</p>
+				</div>
+
+				<div id="slider_hui">
+					<div><img src="{% static 'images/wdg1.jpg' %}" class="slider_wdh"></div>
+					<div><img src="{% static 'images/wdg2.jpg' %}" class="slider_wdh"></div>
+					<div><img src="{% static 'images/wdg3.jpg' %}" class="slider_wdh"></div>
+				</div>
+
+			</div>
+		</section2>
+		<section3>
+			<div class="container">
+				<div class="section__header3">
+					<h1>SCREENSHOTS</h1>
+					<p class="p3">The brightest images</p>
+				</div>
+
+				<div class="cloudy">
+					<img src="{% static 'images/cloudy.jpg' %}" width="310" height="500" class="rightpic1">
+					<img src="{% static 'images/cloudy1.jpg' %}" width="200" height="120" class="cloudy1">
+					<h1 class="h11">WHEN THE CLOUDY<p class="p11">Variable information on the air humidity, the feeling of the weather, and the ability to share this with your friends.</p> </h1>
+				</div>
+
+				<div class="sunny">
+					<img src="{% static 'images/sunny.jpg' %}" width="310" height="500" class="rightpic2">
+					<img src="{% static 'images/sunny1.jpg' %}" width="200" height="120" class="sunny1">
+					<h1 class="sunnt__h1">WHEN THE SUN<p class="sunny__p">Sometimes the simplest things are the hardest to find. So we created a new line for everyday life.</p></h1>
+				</div>
+
+				<div class="rainy">
+					<img src="{% static 'images/rainy.jpg' %}" width="310" height="500" class="rightpic3">
+					<img src="{% static 'images/rainy1.jpg' %}" width="200" height="120" class="rainy1">
+					<h1 class="rainy__h1">THEN THE RAIN<p class="rairu__p">Sometimes the simplest things are the hardest to find. So we created a new line for everyday life.</p> </h1>
+				</div>
+
+			</div>
+    </section3>
+
+     <section7>
+        <div class="container">
+            <div class="section_header7">
+                <h1 class="p7">when downloading our application you will receive a nice bonus</h1>
+            </div>
+        </div>
+         <center>
+
+
+        <div class="CanvasContainer">
+                <canvas id="drawingCanvas" width="500" height="300"></canvas>
+        </div>
+        <div class="Toolbar">
+                - Операции-<br>
+                <button onclick="saveCanvas()">send</button>
+                <button onclick="clearCanvas()">clear</button>
+                <div id="savedCopyContainer">
+                   <img id="savedImageCopy"><br>
+                   Щелкните правой кнопкой мыши для сохранения ...
+                </div>
+
+</div>
+         </center>
+    </section7>
+
+		<section4>
+			<div class="container">
+				<div class="section__header4">
+					<h1>WHAT PEOPLE ARE SEYING</h1>
+					<p class="p4">Reviews</p>
+				</div>
+				<img src="{% static 'images/coments.jpg' %}" width="1000" height="700" class="coments">
+			</div>
+		</section4>
+
+		<section5>
+			<div class="section5">
+
+				<div class="end">WEATHER</div>
+				<nav class="nav1" style =" padding-left: 540px;
+				margin-top: -35px;
+				">
+
+				<a class="nav__link1" href="#">Home</a>
+				<a class="nav__link1" href="#">Features</a>
+				<a class="nav__link1" href="#">Reviews</a>
+				<a class="nav__link1" href="#">Download</a>
+				<a class="nav__link2" href="https://www.facebook.com/"><img src="{% static 'images/facebook.png' %}" width="30" hight="30"></a>
+				<a class="nav__link2" href="https://www.instagram.com/"><img src="{% static 'images/instagram.png' %}" width="30" hight="30"></a>
+				<a class="nav__link2" href="https://twitter.com/"><img src="{% static 'images/twitter.png' %}" width="30" hight="30"></a>
+			</nav>
+
+		</div>
+	</section5>
+
+</body>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="{% static 'js/slick.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+
+</html>
