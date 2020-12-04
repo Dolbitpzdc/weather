@@ -49,9 +49,15 @@
 				<h1>Check the weather right here!</h1>
 				<p class="p6">Just click</p>
 			</div>
+			<form action="{% url 'weather_now' %}">
                     <button class="wbtn">Weather now</button>
-                    <button class="wbtn">For 10 days</button>
-                    <button class="wbtn">For a month</button>
+			</form>
+			<form action="{% url 'weather_now' %}">
+                    <button class="wbtn2">For 7 days</button>
+			</form>
+			<form action="{% url 'weather_now' %}">
+                    <button class="wbtn3">For a month</button>
+			</form>
         </div>
     </section6>
 
@@ -62,13 +68,13 @@
 				<p class="p">Only necessary</p>
 			</div>
 			<div class="bar">
-				<img src="{% static 'images/int1.jpg' %}" width="70" height="70" class="rightpic"> <h1 class="h1">Usability<p class="p1">Sometimes the simplast things are the hardest to find. So we created a new line for everyday life</p> </h1>
+				<img src="{% static 'images/int1.png' %}" width="70" height="70" class="rightpic"> <h1 class="h1">Usability<p class="p1">Sometimes the simplast things are the hardest to find. So we created a new line for everyday life</p> </h1>
 
-				<img src="{% static 'images/int2.jpg' %}" width="70" height="70" class="rightpic"> <h1 class="h1">Parallax Effect
+				<img src="{% static 'images/int2.png' %}" width="70" height="70" class="rightpic"> <h1 class="h1">Parallax Effect
 					<p class="p1">Sometimes the simplast things are the hardest to find. So we created a new line for everyday life</p></h1>
 
 
-					<img src="{% static 'images/int3.jpg' %}" width="70" height="70" class="rightpic"> <h1 class="h1">Unlimites Colors <p class="p1">Sometimes the simplast things are the hardest to find. So we created a new line for everyday life</p> </h1>
+					<img src="{% static 'images/int3.png' %}" width="70" height="70" class="rightpic"> <h1 class="h1">Unlimites Colors <p class="p1">Sometimes the simplast things are the hardest to find. So we created a new line for everyday life</p> </h1>
 
 				</div>
 			</div>
@@ -82,9 +88,9 @@
 				</div>
 
 				<div id="slider_hui">
-					<div><img src="{% static 'images/wdg1.jpg' %}" class="slider_wdh"></div>
-					<div><img src="{% static 'images/wdg2.jpg' %}" class="slider_wdh"></div>
-					<div><img src="{% static 'images/wdg3.jpg' %}" class="slider_wdh"></div>
+					<div><img src="{% static 'images/wdg1.png' %}" class="slider_wdh"></div>
+					<div><img src="{% static 'images/wdg2.png' %}" class="slider_wdh"></div>
+					<div><img src="{% static 'images/wdg3.png' %}" class="slider_wdh"></div>
 				</div>
 
 			</div>
@@ -97,20 +103,20 @@
 				</div>
 
 				<div class="cloudy">
-					<img src="{% static 'images/cloudy.jpg' %}" width="310" height="500" class="rightpic1">
-					<img src="{% static 'images/cloudy1.jpg' %}" width="200" height="120" class="cloudy1">
+					<img src="{% static 'images/cloudy.png' %}" width="310" height="500" class="rightpic1">
+					<img src="{% static 'images/cloudy1.png' %}" width="200" height="120" class="cloudy1">
 					<h1 class="h11">WHEN THE CLOUDY<p class="p11">Variable information on the air humidity, the feeling of the weather, and the ability to share this with your friends.</p> </h1>
 				</div>
 
 				<div class="sunny">
-					<img src="{% static 'images/sunny.jpg' %}" width="310" height="500" class="rightpic2">
-					<img src="{% static 'images/sunny1.jpg' %}" width="200" height="120" class="sunny1">
+					<img src="{% static 'images/sunny.png' %}" width="310" height="500" class="rightpic2">
+					<img src="{% static 'images/sunny1.png' %}" width="200" height="120" class="sunny1">
 					<h1 class="sunnt__h1">WHEN THE SUN<p class="sunny__p">Sometimes the simplest things are the hardest to find. So we created a new line for everyday life.</p></h1>
 				</div>
 
 				<div class="rainy">
-					<img src="{% static 'images/rainy.jpg' %}" width="310" height="500" class="rightpic3">
-					<img src="{% static 'images/rainy1.jpg' %}" width="200" height="120" class="rainy1">
+					<img src="{% static 'images/rainy.png' %}" width="310" height="500" class="rightpic3">
+					<img src="{% static 'images/rainy1.png' %}" width="200" height="120" class="rainy1">
 					<h1 class="rainy__h1">THEN THE RAIN<p class="rairu__p">Sometimes the simplest things are the hardest to find. So we created a new line for everyday life.</p> </h1>
 				</div>
 
@@ -148,7 +154,7 @@
 					<h1>WHAT PEOPLE ARE SEYING</h1>
 					<p class="p4">Reviews</p>
 				</div>
-				<img src="{% static 'images/coments.jpg' %}" width="1000" height="700" class="coments">
+				<img src="{% static 'images/coments.png' %}" width="1000" height="700" class="coments">
 			</div>
 		</section4>
 
@@ -156,7 +162,7 @@
 			<div class="section5">
 
 				<div class="end">WEATHER</div>
-				<nav class="nav1" style =" padding-left: 540px;
+				<nav class="nav1" style =" padding-left: 400px;
 				margin-top: -35px;
 				">
 

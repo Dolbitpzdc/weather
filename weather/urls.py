@@ -22,5 +22,6 @@ from django.conf.urls.static import static
 urlpatterns = [
     # path('admin/', admin.site.urls),
     path('', views.home),
+    path('weather_now/', views.weather_now, name = 'weather_now')
     # path('statics/{name}', views.getStatic)
 ]
