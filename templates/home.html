@@ -1,188 +1,290 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Weather</title>
-	<link rel="stylesheet" href="{% static 'css/home.css' %}">
-	<link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300&display=swap"
-	rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&family=Peddana&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&family=Peddana&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&family=Peddana&display=swap" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="{% static 'css/slick.css' %}"/>
-	<link rel="stylesheet" type="text/css" href="{% static 'css/slick-theme.css' %}"/>
-</head>
-<body>
-	<header class="header">
-		<div class="container">
-			<div class="header__inner">
-				<div class="header__logo">WEATHER</div>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content />
+        <meta name="author" content />
+        <title>Weather</title>
+        <link href="{% static 'css/home.css' %}" rel="stylesheet" />
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        <link rel="icon" type="image/x-icon" href="assets/img/favicon.png" />
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+        <script data-search-pseudo-elements defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.24.1/feather.min.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div id="layoutDefault">
+            <div id="layoutDefault_content">
+                <main>
+                    <!-- Navbar-->
+                    <nav class="navbar navbar-marketing navbar-expand-lg bg-transparent navbar-light fixed-top">
+                        <div class="container">
+                            <a class="navbar-brand text-primary" href="index.html">Weather</a><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><i data-feather="menu"></i></button>
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul class="navbar-nav ml-auto mr-lg-5">
+                                    <li class="nav-item"><a class="nav-link" href="#Home">Home </a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#FEATURES">Features </a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#Reviews">Reviews </a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#SCREENSHOTS">Screenshots </a></li>
+                                </ul>
+                                <a class="btn font-weight-500 ml-lg-4 btn-primary" href="#">Log in<i class="ml-2" data-feather="arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </nav>
+                    <!-- Page Header-->
+                    <header class="page-header page-header-light bg-white" id = "Home">
+                        <div class="page-header-content pt-5">
+                            <div class="container">
+                                <div class="row align-items-center">
+                                    <div class="col-lg-6" data-aos="fade-up">
+                                        <h1 class="page-header-title">Get the most cool weather app</h1>
+                                        <p class="page-header-text mb-5">Simple, nice and user-friendly application of the weather. Only useful information</p>
+                                        <a class="btn btn-lg btn-primary font-weight-500 mr-3" href="landing-multipurpose.html">Download<i class="ml-2" data-feather="arrow-right"></i></a>
+                                        <a class="btn btn-lg btn-primary-soft text-primary font-weight-500" href="#Check the weather">Check the weather</a>
+                                    </div>
+                                    <div class="col-lg-6 d-none d-lg-block" data-aos="fade-up" data-aos-delay="100"><img style="    width: 70%;" src="{% static 'images/phone.png' %}"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="svg-border-rounded text-light">
+                            <!-- Rounded SVG Border--><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144.54 17.34" preserveAspectRatio="none" fill="currentColor"><path d="M144.54,17.34H0V0H144.54ZM0,0S32.36,17.34,72.27,17.34,144.54,0,144.54,0" /></svg>
+                        </div>
+                    </header>
 
-				<nav class="nav">
-					<a class="nav__link" href="#">Home</a>
-					<a class="nav__link" href="#">Features</a>
-					<a class="nav__link" href="#">Reviews</a>
-					<a class="nav__link" href="#">Download</a>
-				</nav>
+                    <section class="bg-white py-10" id = "Check the weather">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <div class="text-center mb-10">
+                                        <h2>Check the weather right here!</h2>
+                                        <p class="lead">Just click</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row justify-content-center">
+                              <form method="GET" onsubmit="return false;" name="test_weather" style="text-align: center;">
+                                <div class="form-group">
+                                  <input placeholder="Enter city.." class="form-control" id="city" type="text" name="city">
+                                </div>
 
-			</div>
-		</div>
-	</header>
-	<div class="intro">
-		<div class="container">
-			<div class="intro__inner">
-
-				<h1 class="intro__title">Get the most cool weather app</h1>
-				<h2 >Simple, nice and user-friendly application of the weather. Only useful information</h2>
-				<a href="" class="intro__btn"><snap>Download</snap></a>
-				<a href="" class="inrto__btn_two"><snap>Features</snap></a>
-
-			</div>
-		</div>
-	</div>
-
-    <section6>
-        <div class="container">
-            <div class="section__header6">
-				<h1>Check the weather right here!</h1>
-				<p class="p6">Just click</p>
-			</div>
-			<form action="{% url 'weather_now' %}">
-                    <button class="wbtn">Weather now</button>
-			</form>
-			<form action="{% url 'weather_now' %}">
-                    <button class="wbtn2">For five days</button>
-			</form>
-			<form action="{% url 'weather_now' %}">
-                    <button class="wbtn3">For a month</button>
-			</form>
-        </div>
-    </section6>
-
-	<section>
-		<div class="container">
-			<div class="section__header">
-				<h1>PERFECT FEATURES</h1>
-				<p class="p">Only necessary</p>
-			</div>
-			<div class="bar">
-				<img src="{% static 'images/int1.png' %}" width="70" height="70" class="rightpic"> <h1 class="h1">Usability<p class="p1">Sometimes the simplast things are the hardest to find. So we created a new line for everyday life</p> </h1>
-
-				<img src="{% static 'images/int2.png' %}" width="70" height="70" class="rightpic"> <h1 class="h1">Parallax Effect
-					<p class="p1">Sometimes the simplast things are the hardest to find. So we created a new line for everyday life</p></h1>
+                                <input type="submit" onclick="getWeather(this);" name="now" value="Weather now" class="btn btn-primary mr-2">
+                                <input type="submit" onclick="getWeather(this);" name="five_days" value="For five days" class="btn btn-primary mr-2">
+                                <input type="submit" onclick="getWeather(this);" name="month" value="For a month" class="btn btn-primary">
 
 
-					<img src="{% static 'images/int3.png' %}" width="70" height="70" class="rightpic"> <h1 class="h1">Unlimites Colors <p class="p1">Sometimes the simplast things are the hardest to find. So we created a new line for everyday life</p> </h1>
 
-				</div>
-			</div>
-		</section>
+                              </form>
+                            </div>
+                        </div>
+                        <div class="svg-border-rounded text-light">
+                            <!-- Rounded SVG Border--><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144.54 17.34" preserveAspectRatio="none" fill="currentColor"><path d="M144.54,17.34H0V0H144.54ZM0,0S32.36,17.34,72.27,17.34,144.54,0,144.54,0" /></svg>
+                        </div>
+                    </section>
 
-		<section2>
-			<div class="container">
-				<div class="section__header2">
-					<h1>SIMPLE WIDGETS</h1>
-					<p class="p2">Drag and Drop</p>
-				</div>
+                    <section class="bg-light py-10" id = "FEATURES">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <div class="text-center mb-10">
+                                        <h2 id = "Features" >PERFECT FEATURES</h2>
+                                        <p class="lead">Only necessary</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row text-center">
+                                <div class="col-lg-4 mb-5">
+                                    <h6 class="mb-3">				<img src="{% static 'images/int1.png' %}" width="70" height="70" class="rightpic"> <h1 class="h1">Usability<p class="p1">Sometimes the simplast things are the hardest to find. So we created a new line for everyday life</p> </h1>
+                                    </h6>
+                                </div>
+                                <div class="col-lg-4 mb-5">
+                                    <h6 class="mb-3"><img src="{% static 'images/int2.png' %}" width="70" height="70" class="rightpic"> <h1 class="h1">Parallax Effect
+					<p class="p1">Sometimes the simplast things are the hardest to find. So we created a new line for everyday life</p></h1></h6>
+                                </div>
+                                <div class="col-lg-4 mb-5">
+                                    <h6 class="mb-3">					<img src="{% static 'images/int3.png' %}" width="70" height="70" class="rightpic"> <h1 class="h1">Unlimites Colors <p class="p1">Sometimes the simplast things are the hardest to find. So we created a new line for everyday life</p> </h1>
+                                    </h6>
+                                </div>
 
-				<div id="slider_hui">
-					<div><img src="{% static 'images/wdg1.png' %}" class="slider_wdh"></div>
-					<div><img src="{% static 'images/wdg2.png' %}" class="slider_wdh"></div>
-					<div><img src="{% static 'images/wdg3.png' %}" class="slider_wdh"></div>
-				</div>
+                            </div>
+                        </div>
+                        <div class="svg-border-rounded text-white">
+                            <!-- Rounded SVG Border--><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144.54 17.34" preserveAspectRatio="none" fill="currentColor"><path d="M144.54,17.34H0V0H144.54ZM0,0S32.36,17.34,72.27,17.34,144.54,0,144.54,0" /></svg>
+                        </div>
+                    </section>
+                    <section class="bg-white py-10" id = "SIMPLE WIDGETS">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <div class="text-center mb-10">
+                                        <div class="badge badge-pill badge-primary-soft text-primary badge-marketing mb-3">
+                                          <div class="section__header2">
+                                      					<h1>SIMPLE WIDGETS</h1>
+                                      					<p class="p2">Drag and Drop</p>
+                                      				</div>
+                                        </div>
 
-			</div>
-		</section2>
-		<section3>
-			<div class="container">
-				<div class="section__header3">
-					<h1>SCREENSHOTS</h1>
-					<p class="p3">The brightest images</p>
-				</div>
+                                        <div class="swiper-container">
+                                                      <!-- Additional required wrapper -->
+                                                      <div class="swiper-wrapper">
+                                                          <!-- Slides -->
+                                                          <div class="swiper-slide"><img src="{% static 'images/wdg1 (2).png' %}" class="slider_wdh"></div>
+                                                          <div class="swiper-slide"><img src="{% static 'images/wdg2 (2).png' %}" class="slider_wdh"></div>
+                                                          <div class="swiper-slide"><img src="{% static 'images/wdg3 (2).png' %}" class="slider_wdh"></div>
+                                                          ...
+                                                      </div>
 
-				<div class="cloudy">
-					<img src="{% static 'images/cloudy.png' %}" width="310" height="500" class="rightpic1">
-					<img src="{% static 'images/cloudy1.png' %}" width="200" height="120" class="cloudy1">
-					<h1 class="h11">WHEN THE CLOUDY<p class="p11">Variable information on the air humidity, the feeling of the weather, and the ability to share this with your friends.</p> </h1>
-				</div>
+                                                      <!-- If we need navigation buttons -->
+                                                      
+                                                      <!-- <div class="swiper-button-prev"></div>
+                                                      <div class="swiper-button-next"></div> -->
 
-				<div class="sunny">
-					<img src="{% static 'images/sunny.png' %}" width="310" height="500" class="rightpic2">
-					<img src="{% static 'images/sunny1.png' %}" width="200" height="120" class="sunny1">
-					<h1 class="sunnt__h1">WHEN THE SUN<p class="sunny__p">Sometimes the simplest things are the hardest to find. So we created a new line for everyday life.</p></h1>
-				</div>
+                                                  </div>
 
-				<div class="rainy">
-					<img src="{% static 'images/rainy.png' %}" width="310" height="500" class="rightpic3">
-					<img src="{% static 'images/rainy1.png' %}" width="200" height="120" class="rainy1">
-					<h1 class="rainy__h1">THEN THE RAIN<p class="rairu__p">Sometimes the simplest things are the hardest to find. So we created a new line for everyday life.</p> </h1>
-				</div>
+                        <div class="svg-border-rounded text-light">
+                            <!-- Rounded SVG Border--><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144.54 17.34" preserveAspectRatio="none" fill="currentColor"><path d="M144.54,17.34H0V0H144.54ZM0,0S32.36,17.34,72.27,17.34,144.54,0,144.54,0" /></svg>
+                        </div>
+                    </section>
+                    <section class="bg-light py-10" id = "SCREENSHOTS">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <div class="text-center mb-10">
+                                        <div class="badge badge-pill badge-primary-soft text-primary badge-marketing mb-3"><h1>SCREENSHOTS</h1>
+                                      					<p class="p3">The brightest images</p>
+                                      				</div>
 
-			</div>
-    </section3>
+                                      				<div class="cloudy">
+                                      					<img src="{% static 'images/cloudy.png' %}" width="310" height="500" class="rightpic1">
+                                      					<img src="{% static 'images/cloudy1.png' %}" width="200" height="120" class="cloudy1">
+                                      					<h1 class="h11">WHEN THE CLOUDY<p class="p11">Variable information on the air humidity, the feeling of the weather, and the ability to share this with your friends.</p> </h1>
+                                      				</div>
 
-     <section7>
-        <div class="container">
-            <div class="section_header7">
-                <h1 class="p7">when downloading our application you will receive a nice bonus</h1>
+                                      				<div class="sunny">
+                                      					<img src="{% static 'images/sunny.png' %}" width="310" height="500" class="rightpic2">
+                                      					<img src="{% static 'images/sunny1.png' %}" width="200" height="120" class="sunny1">
+                                      					<h1 class="sunnt__h1">WHEN THE SUN<p class="sunny__p">Sometimes the simplest things are the hardest to find. So we created a new line for everyday life.</p></h1>
+                                      				</div>
+
+                                      				<div class="rainy">
+                                      					<img src="{% static 'images/rainy.png' %}" width="310" height="500" class="rightpic3">
+                                      					<img src="{% static 'images/rainy1.png' %}" width="200" height="120" class="rainy1">
+                                      					<h1 class="rainy__h1">THEN THE RAIN<p class="rairu__p">Sometimes the simplest things are the hardest to find. So we created a new line for everyday life.</p> </h1>
+                                      				</div>
+                                      </div>
+
+                                      <section class="bg-light py-10" id = "Reviews">
+                                          <div class="container">
+                                              <div class="row justify-content-center">
+                                                  <div class="col-lg-8">
+                                                      <div class="text-center mb-10">
+                                        <div class="badge badge-pill badge-primary-soft text-primary badge-marketing mb-3"><h2>WHAT PEOPLE ARE SEYING</h2>
+                                        <p class="p3">Reviews</p>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row text-center">
+                                <div class="col-lg-4 mb-5">
+                                    <h1 class="mb-3">"What art offers is space - a certain breathing room for thespirit"</h1>
+                                    <h6 class="mb-3">John Updik</h6>
+                                </div>
+                                <div class="col-lg-4 mb-5">
+                                  <h1 class="mb-3">"We do not see nature with our eyes, but with our understandindgs and our hearts"</h1>
+                                  <h6 class="mb-3">William Hazlitt</h6>
+                                </div>
+                                <div class="col-lg-4 mb-5">
+                                  <h1 class="mb-3">"No man has a good enough memory to be a successful liar"</h1>
+                                  <h6 class="mb-3">Abraham Lincoln</h6>
+                                </div>
+                                <div class="col-lg-4 mb-5">
+
+                                </div>
+                                <div class="col-lg-4 mb-5">
+                                  <h1 class="mb-3">"The only courage that matters is the kind that gets you from one moment to the next"</h1>
+                                  <h6 class="mb-3">Mignon McLaughlin</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="svg-border-rounded text-white">
+                            <!-- Rounded SVG Border--><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144.54 17.34" preserveAspectRatio="none" fill="currentColor"><path d="M144.54,17.34H0V0H144.54ZM0,0S32.36,17.34,72.27,17.34,144.54,0,144.54,0" /></svg>
+                        </div>
+                    </section>
+
+                </main>
+            </div>
+            <div id="layoutDefault_footer">
+                <footer class="footer pt-10 pb-5 mt-auto bg-light footer-light">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <div class="footer-brand">WEATHER</div>
+                                <div class="icon-list-social mb-5">
+                                    <a class="icon-list-social-link" href="#!"><i class="fab fa-instagram"></i></a><a class="icon-list-social-link" href="#!"><i class="fab fa-facebook"></i></a><a class="icon-list-social-link" href="#!"><i class="fab fa-twitter"></i></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-9">
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+                                        <a class="text-uppercase-expanded text-xs mb-4" href="#Home">Home</a>
+                                    </div>
+
+                                    <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+                                        <a class="text-uppercase-expanded text-xs mb-4" href="#FEATURES">Features</a>
+                                    </div>
+
+                                    <div class="col-lg-3 col-md-6 mb-5 mb-md-0">
+                                        <a class="text-uppercase-expanded text-xs mb-4" href="#Reviews">Reviews</a>
+                                    </div>
+
+                                    <div class="col-lg-3 col-md-6">
+                                        <a class="text-uppercase-expanded text-xs mb-4" href="/">Download</a>
+
+                                </div>
+                            </div>
+                        </div>
+
+                </footer>
             </div>
         </div>
-         <center>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="{% static 'js/scripts.js' %}"></script>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
+        <script>
+          function getWeather(button){
+            var time_w = button.name;
+            var city = document.querySelector("#city").value;
+            if (time_w == "now"){
+              $.ajax({
+                url: "/api/getWeather/?city="+city,
+                method: "GET",
+                success: function(response){
+                  alert(response.temperature)
+                }
+              });
 
-        <div class="CanvasContainer">
-                <canvas id="drawingCanvas" width="500" height="300"></canvas>
-        </div>
-        <div class="Toolbar">
-                - Операции-<br>
-                <button onclick="saveCanvas()">send</button>
-                <button onclick="clearCanvas()">clear</button>
-                <div id="savedCopyContainer">
-                   <img id="savedImageCopy"><br>
-                   Щелкните правой кнопкой мыши для сохранения ...
-                </div>
+            }
+          }
+        </script>
 
-</div>
-         </center>
-    </section7>
+        <script>
+            AOS.init({
+                disable: 'mobile',
+                duration: 600,
+                once: true,
+            });
+        </script>
 
-		<section4>
-			<div class="container">
-				<div class="section__header4">
-					<h1>WHAT PEOPLE ARE SEYING</h1>
-					<p class="p4">Reviews</p>
-				</div>
-				<img src="{% static 'images/coments.png' %}" width="1000" height="700" class="coments">
-			</div>
-		</section4>
-
-		<section5>
-			<div class="section5">
-
-				<div class="end">WEATHER</div>
-				<nav class="nav1" style =" padding-left: 400px;
-				margin-top: -35px;
-				">
-
-				<a class="nav__link1" href="#">Home</a>
-				<a class="nav__link1" href="#">Features</a>
-				<a class="nav__link1" href="#">Reviews</a>
-				<a class="nav__link1" href="#">Download</a>
-				<a class="nav__link2" href="https://www.facebook.com/"><img src="{% static 'images/facebook.png' %}" width="30" hight="30"></a>
-				<a class="nav__link2" href="https://www.instagram.com/"><img src="{% static 'images/instagram.png' %}" width="30" hight="30"></a>
-				<a class="nav__link2" href="https://twitter.com/"><img src="{% static 'images/twitter.png' %}" width="30" hight="30"></a>
-			</nav>
-
-		</div>
-	</section5>
-
-</body>
-
-<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
-<script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-<script type="text/javascript" src="{% static 'js/slick.min.js' %}"></script>
-<script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+    </body>
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="{% static 'js/slick.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
 
 </html>

@@ -1,6 +1,20 @@
-<form name="test" method="get">
-  <p><b>Input sity:</b><br>
-   <input type={{place}} size="40" name="city">
-</form>
+{% load static %}
+<!DOCTYPE html>
+<html lang="EN">
+<head>
+  	<meta charset="utf-8">
+    <link rel="stylesheet" href="{% static 'css/weather_now.css' %}">
+</head>
+<body>
+  <header class="head_weather1">
+    <form name="test" method="get">
+      <p><b>Input sity:</b><br>
+       <input type={{place}} size="40" name="city">
+    </form>
 
-<h1>{{ response }}</h1>
+  <h1>{{ response }}</h1>
+
+  <a href="/" class="button1">home</a>
+</header>
+</body>
+</html>
